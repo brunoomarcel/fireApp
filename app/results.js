@@ -1,12 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
-// import { useRouter } from 'expo-router';
 
 export default function Results() {
-    // Capturar os parâmetros passados
     const params = global.dietaResponse;
-    // const results = JSON.stringify(params);
-    // console.log(results);
     if (!params) {
         return (
             <View style={styles.container}>
@@ -23,8 +19,7 @@ export default function Results() {
             <View style={styles.scrollContent}>
 
                 <Image style={styles.image} source={require('../assets/adaptive-icon.png')} />
-                <Text style={styles.header}>Seus Dados:</Text>
-                <Text style={styles.text}>Nome Aluno: {data.nome}</Text>
+                <Text style={styles.header}>Bem vindo, {data.nome}!</Text>
                 <Text style={styles.text}>Sexo: {data.sexo}</Text>
                 <Text style={styles.text}>Idade: {data.idade}</Text>
                 <Text style={styles.text}>Altura: {data.altura} cm</Text>
